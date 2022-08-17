@@ -59,3 +59,18 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+/* #region card */
+.card {
+  max-width: 250px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+.card__avatar {
+  width: 100%;
+}
+.card__login {
+  text-align: center;
+  font-size: 2em;
+}
+/* #endregion card */
