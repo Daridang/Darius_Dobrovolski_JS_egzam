@@ -15,3 +15,33 @@ const formEl = document.querySelector('form');
 const searchEl = document.getElementById('search');
 const outputEl = document.getElementById('output');
 // #endregion target html elements
+
+// #region init
+const kgToLb = (kg) => `${kg}kg = ${kg * 2.2046}lb`;
+const kgToG = (kg) => `${kg}kg = ${kg / 0.001}g`;
+const kgToOz = (kg) => `${kg}kg = ${kg * 35.274}oz`;
+const formules = [kgToLb, kgToG, kgToOz]
+// #endregion init
+
+// #region event listeners
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const input = +searchEl.value;
+
+    if (isNaN(searchEl.value)) {
+        searchEl.value = '';
+        return;
+    }
+    outputEl.innerHTML = '';
+    formules.forEach(fun => { addAnswerToHtml(outputEl, fun(input)) })
+})
+// #endregion event listeners
+
+// #region helpers
+function addAnswerToHtml(parentBody, answer) {
+    const pEl = document.createElement('p');
+    pEl.append(answer);
+    parentBody.append(pEl);
+}
+// #endregion helpers
