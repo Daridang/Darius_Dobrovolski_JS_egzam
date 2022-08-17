@@ -28,3 +28,10 @@ function getUserAverageAge(arr) {
 }
 console.log(`Average age is: ${Math.ceil(getUserAverageAge(users))}`);
 // #endregion user average age
+
+// #region users name array
+function getUsersNames(arr) {
+  return arr.map(user => user.name);
+}
+console.log(getUsersNames(users));
+// #endregion users name array
