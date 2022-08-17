@@ -23,8 +23,25 @@ async function getUsers() {
     const response = await fetch(ENDPOINT);
     if (response.ok) {
         const result = await response.json();
-        console.log(result);
+        displayUsers(result);
     }
 }
 getUsers();
 // #endregion api request
+
+// #region card
+function createCard(userData) {
+    return `
+    <div class="card">
+        <img rc="${userData.avatar_url}" alt="user avatar" class="avatar" />
+        <p class="login">${userData.login}</p>
+    </div>
+    `
+}
+// #endregion card
+
+// #region helpers
+function displayUsers(result) {
+    result.forEach(user => console.log(user.login + " " + user.avatar_url))
+}
+// #endregion helpers
