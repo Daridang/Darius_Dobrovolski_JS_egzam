@@ -27,3 +27,14 @@
   margin-top: 50px;
   color: #333;
 }
+
+/* #region card */
+.card {
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px;
+}
+.card__title {
+  margin-bottom: 10px;
+}
+/* #endregion card */
