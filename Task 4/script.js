@@ -10,3 +10,12 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+
+// #region fetching data from file
+async function getCars() {
+    const response = await fetch('cars.json');
+    const result = await response.json();
+    console.log(result);
+}
+getCars();
+// #endregion fetching data from file
