@@ -53,6 +53,10 @@
 }
 
 .output-cointainer #output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
   width: 80%;
   margin-top: 25px;
   padding: 30px;
@@ -62,7 +66,7 @@
 
 /* #region card */
 .card {
-  max-width: 250px;
+  max-width: 240px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
 }

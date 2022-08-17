@@ -33,7 +33,6 @@ async function getUsers() {
         displayUsers(result);
     }
 }
-// getUsers();
 // #endregion api request
 
 // #region card
