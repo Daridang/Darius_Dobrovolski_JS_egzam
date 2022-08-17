@@ -17,3 +17,14 @@ const ENDPOINT = 'https://api.github.com/users';
 const outputEl = document.getElementById('output');
 const messageEl = document.getElementById('message');
 // #endregion targeting html elements
+
+// #region api request
+async function getUsers() {
+    const response = await fetch(ENDPOINT);
+    if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+    }
+}
+getUsers();
+// #endregion api request
