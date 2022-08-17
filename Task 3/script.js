@@ -33,8 +33,8 @@ getUsers();
 function createCard(userData) {
     return `
     <div class="card">
-        <img rc="${userData.avatar_url}" alt="user avatar" class="avatar" />
-        <p class="login">${userData.login}</p>
+        <img rc="${userData.avatar_url}" alt="user avatar" class="card__avatar" />
+        <p class="card__login">${userData.login}</p>
     </div>
     `
 }
