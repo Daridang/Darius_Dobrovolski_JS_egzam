@@ -12,3 +12,8 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'https://api.github.com/users';
+
+// #region targeting html elements
+const outputEl = document.getElementById('output');
+const messageEl = document.getElementById('message');
+// #endregion targeting html elements
