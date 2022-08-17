@@ -34,7 +34,9 @@ formEl.addEventListener('submit', (e) => {
         return;
     }
     outputEl.innerHTML = '';
-    formules.forEach(fun => { addAnswerToHtml(outputEl, fun(input)) })
+    formules.forEach(formulaFunc => {
+        addAnswerToHtml(outputEl, formulaFunc(input))
+    })
 })
 // #endregion event listeners
 
