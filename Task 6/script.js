@@ -19,3 +19,12 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+// #region user average age
+function getUserAverageAge(arr) {
+  return arr.reduce((age, user) => {
+    return age + user.age / arr.length;
+  }, 0);
+}
+console.log(`Average age is: ${Math.ceil(getUserAverageAge(users))}`);
+// #endregion user average age
