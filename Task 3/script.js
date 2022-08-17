@@ -16,7 +16,14 @@ const ENDPOINT = 'https://api.github.com/users';
 // #region targeting html elements
 const outputEl = document.getElementById('output');
 const messageEl = document.getElementById('message');
+const btnEl = document.getElementById('btn');
 // #endregion targeting html elements
+
+// #region button listener
+btnEl.addEventListener('click', async () => {
+    await getUsers();
+})
+// #endregion button listener
 
 // #region api request
 async function getUsers() {
@@ -26,14 +33,14 @@ async function getUsers() {
         displayUsers(result);
     }
 }
-getUsers();
+// getUsers();
 // #endregion api request
 
 // #region card
 function createCard(userData) {
     return `
     <div class="card">
-        <img rc="${userData.avatar_url}" alt="user avatar" class="card__avatar" />
+        <img src="${userData.avatar_url}" alt="user avatar" class="card__avatar" />
         <p class="card__login">${userData.login}</p>
     </div>
     `
@@ -42,6 +49,8 @@ function createCard(userData) {
 
 // #region helpers
 function displayUsers(result) {
-    result.forEach(user => console.log(user.login + " " + user.avatar_url))
+    outputEl.innerHTML = ''
+    messageEl.style.display = 'none'
+    result.forEach(user => outputEl.insertAdjacentHTML('afterbegin', createCard(user)))
 }
 // #endregion helpers
