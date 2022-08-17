@@ -10,3 +10,16 @@ const audi = {
   year: 2005,
   color: 'white',
 };
+
+// #region show object keys
+function showObjectKeys(obj) {
+  const arr = [];
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      arr.push(key);
+    }
+  }
+  return arr;
+}
+console.log(showObjectKeys(audi))
+// #endregion show object keys
