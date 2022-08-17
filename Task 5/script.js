@@ -26,3 +26,10 @@ function filterDogOwers(arr) {
 }
 console.log(filterDogOwers(users));
 // #endregion task 5.1
+
+// #region task 5.2
+function filterAdults(arr) {
+  return arr.filter(user => user.age >= 18);
+}
+console.log(filterAdults(users));
+// #endregion task 5.2
