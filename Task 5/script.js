@@ -19,3 +19,17 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
+
+// #region task 5.1
+function filterDogOwers(arr) {
+  return arr.filter(user => user.hasDog);
+}
+console.log(filterDogOwers(users));
+// #endregion task 5.1
+
+// #region task 5.2
+function filterAdults(arr) {
+  return arr.filter(user => user.age >= 18);
+}
+console.log(filterAdults(users));
+// #endregion task 5.2
