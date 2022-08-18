@@ -5,3 +5,24 @@ subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
 multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
+
+// #region calculator
+function Calculator() {
+    this.sum = function(a, b) {
+        return a + b;
+    }
+    this.substraction = function(a, b) {
+        return a - b;
+    }
+    this.multiplication = function(a, b) {
+        return a * b;
+    }
+    this.division = function(a, b) {
+        return a / b;
+    }
+}
+console.log(new Calculator().sum(5, 5));
+console.log(new Calculator().substraction(5, 5));
+console.log(new Calculator().multiplication(5, 5));
+console.log(new Calculator().division(5, 5));
+// #endregion calculator

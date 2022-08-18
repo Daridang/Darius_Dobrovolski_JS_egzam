@@ -53,9 +53,43 @@
 }
 
 .output-cointainer #output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
   width: 80%;
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
 }
+
+/* #region card */
+.card {
+  width: 19%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+.card__avatar {
+  width: 100%;
+}
+.card__login {
+  text-align: center;
+  font-size: 2em;
+}
+@media screen and (max-width: 1439px) {
+  .card {
+     width: 24%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .card {
+     width: 32%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+     width: 48%;
+  }
+}
+/* #endregion card */
