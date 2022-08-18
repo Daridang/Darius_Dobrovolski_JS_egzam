@@ -27,3 +27,34 @@
   margin-top: 50px;
   color: #333;
 }
+#output {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* #region card */
+.card {
+  width: 23%;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px;
+}
+.card__title {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 426px) {
+  .card {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .card {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .card {
+    width: 23%;
+  }
+}
+/* #endregion card */
