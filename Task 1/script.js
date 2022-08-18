@@ -29,7 +29,7 @@ formEl.addEventListener('submit', (e) => {
 
     const input = +searchEl.value;
 
-    if (isNaN(searchEl.value)) {
+    if (isNaN(input) || input < 0) {
         searchEl.value = '';
         return;
     }
